@@ -68,30 +68,18 @@ public Task VerifyExcelStream()
 
 #### Verify a ExcelDataReader
 
-<!-- snippet2: VerifyExcelDataReader -->
-<a id='snippet-VerifyWorkbook'></a>
+<!-- snippet: ExcelDataReader -->
+<a id='snippet-ExcelDataReader'></a>
 ```cs
 [Test]
-public Task VerifyWorkbook()
+public Task VerifyExcelDataReader()
 {
-    var book = new Workbook
-    {
-        BuiltInDocumentProperties =
-        {
-            Comments = "the comments"
-        }
-    };
-    book.CustomDocumentProperties.Add("key", "value");
-
-    var sheet = book.Worksheets.Add("New Sheet");
-
-    var cells = sheet.Cells;
-
-    cells[0, 0].PutValue("Some Text");
-    return Verify(book);
+    var stream = File.OpenRead("sample.xlsx");
+    using var reader = ExcelDataReader.Create(stream, ExcelWorkbookType.ExcelXml);
+    return Verify(reader);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L93-L115' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyWorkbook' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L15-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcelDataReader' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: Samples.VerifyExcel#Sheet1.verified.csv -->
