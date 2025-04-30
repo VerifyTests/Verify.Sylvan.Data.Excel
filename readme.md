@@ -74,7 +74,7 @@ public Task VerifyExcelStream()
 [Test]
 public Task VerifyExcelDataReader()
 {
-    var stream = File.OpenRead("sample.xlsx");
+    using var stream = File.OpenRead("sample.xlsx");
     using var reader = ExcelDataReader.Create(stream, ExcelWorkbookType.ExcelXml);
     return Verify(reader);
 }
