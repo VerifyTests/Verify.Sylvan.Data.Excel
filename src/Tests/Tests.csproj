@@ -1,0 +1,21 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MarkdownSnippets.MsBuild" PrivateAssets="all" />
+    <PackageReference Include="NUnit" />
+    <PackageReference Include="NUnit3TestAdapter" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Verify.DiffPlex" />
+    <PackageReference Include="Verify.ImageMagick" />
+    <PackageReference Include="Verify.Nunit" />
+    <ProjectReference Include="..\Verify.Sylvan.Data.Excel\Verify.Sylvan.Data.Excel.csproj" />
+    <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
+
+    <None Update="sample.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

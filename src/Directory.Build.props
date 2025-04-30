@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <NoWarn>CS1591;CS0649;CA1416;NU1608;NU1109</NoWarn>
+    <Version>0.1.0</Version>
+    <LangVersion>preview</LangVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <PackageTags>Sylvan.Data.Excel, Verify</PackageTags>
+    <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification via Sylvan.Data.Excel https://github.com/MarkPflug/Sylvan.Data.Excel/</Description>
+    <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+</Project>
