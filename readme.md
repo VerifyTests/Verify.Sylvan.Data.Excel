@@ -82,6 +82,9 @@ public Task VerifyExcelDataReader()
 <sup><a href='/src/Tests/Samples.cs#L15-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcelDataReader' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+
+## Example snapshot
+
 <!-- snippet: Samples.VerifyExcel#Sheet1.verified.csv -->
 <a id='snippet-Samples.VerifyExcel#Sheet1.verified.csv'></a>
 ```csv
