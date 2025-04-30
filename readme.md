@@ -146,5 +146,3 @@ public Task VerifyWorkbook()
 ```
 <sup><a href='/src/Tests/Samples.VerifyExcel#Sheet1.verified.csv#L1-L46' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyExcel#Sheet1.verified.csv' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
-
-<img src="/src/Tests/Samples.VerifyExcel.verified.png" width="200px">
