@@ -1,7 +1,7 @@
 # <img src="/src/icon.png" height="30px"> Verify.Sylvan.Data.Excel
 
 [![Discussions](https://img.shields.io/badge/Verify-Discussions-yellow?svg=true&label=)](https://github.com/orgs/VerifyTests/discussions)
-[![Build status](https://ci.appveyor.com/api/projects/status/7k8hh0guut2ioak2?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-Aspose)
+[![Build status](https://ci.appveyor.com/api/projects/status/q1eqcnbptyjl24hp?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-sylvan-data-excel)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.Sylvan.Data.Excel.svg)](https://www.nuget.org/packages/Verify.Sylvan.Data.Excel/)
 
 Code provided by Cédric Luthi https://github.com/0xced
@@ -11,6 +11,7 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 Converts documents xlsx to csv for verification.
 
 **See [Milestones](../../milestones?state=closed) for release notes.**
+
 
 ## NuGet package
 
