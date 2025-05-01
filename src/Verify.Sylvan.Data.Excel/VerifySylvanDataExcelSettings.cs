@@ -19,8 +19,15 @@
         return null;
     }
 
-    public static void CsvDataWriterOptions(this VerifySettings settings, CsvDataWriterOptions options) =>
+    public static void CsvDataWriterOptions(this VerifySettings settings, CsvDataWriterOptions options)
+    {
+        if (options.NewLine != "\n")
+        {
+            throw new("NewLine must be '\\n'");
+        }
+
         settings.Context["VerifySylvanDataCsvDataWriterOptions"] = options;
+    }
 
     public static SettingsTask CsvDataWriterOptions(this SettingsTask settings, CsvDataWriterOptions options)
     {

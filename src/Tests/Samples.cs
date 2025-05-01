@@ -1,4 +1,5 @@
 ﻿
+using Sylvan.Data.Csv;
 using Sylvan.Data.Excel;
 
 [TestFixture]
@@ -31,6 +32,24 @@ public class Samples
     {
         var stream = new MemoryStream(File.ReadAllBytes("sample.xlsx"));
         return Verify(stream, "xlsx");
+    }
+
+    #endregion
+
+    #region CsvDataWriterOptions
+
+    [Test]
+    public Task CsvDataWriterOptions()
+    {
+        using var stream = File.OpenRead("sample.xlsx");
+        var options = new CsvDataWriterOptions
+        {
+            Delimiter = '\t',
+            Quote = '"',
+        };
+
+        return Verify(stream)
+            .CsvDataWriterOptions(options);
     }
 
     #endregion

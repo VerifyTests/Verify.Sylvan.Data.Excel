@@ -17,25 +17,25 @@
         VerifierSettings.RegisterFileConverter<ExcelDataReader>(Convert);
     }
 
-    private static ConversionResult Convert(Stream stream, ExcelWorkbookType workbookType, IReadOnlyDictionary<string, object> settings)
+    static ConversionResult Convert(Stream stream, ExcelWorkbookType type, IReadOnlyDictionary<string, object> settings)
     {
-        var readerOptions = settings.GetExcelDataReaderOptions();
-        using var excelReader = ExcelDataReader.Create(stream, workbookType, readerOptions);
-        return Convert(excelReader, settings);
+        var options = settings.GetExcelDataReaderOptions();
+        using var reader = ExcelDataReader.Create(stream, type, options);
+        return Convert(reader, settings);
     }
 
-    private static ConversionResult Convert(ExcelDataReader excelReader, IReadOnlyDictionary<string, object> settings)
+    static ConversionResult Convert(ExcelDataReader reader, IReadOnlyDictionary<string, object> settings)
     {
-        var writerOptions = settings.GetCsvDataWriterOptions();
+        var options = settings.GetCsvDataWriterOptions();
 
         var targets = new List<Target>();
         do
         {
-            var writer = new StringWriter();
-            using var csvWriter = CsvDataWriter.Create(writer, writerOptions);
-            csvWriter.Write(excelReader);
-            targets.Add(new("csv", writer.ToString(), excelReader.WorksheetName));
-        } while (excelReader.NextResult());
+            using var writer = new StringWriter();
+            using var csvWriter = CsvDataWriter.Create(writer, options);
+            csvWriter.Write(reader);
+            targets.Add(new("csv", writer.GetStringBuilder(), reader.WorksheetName));
+        } while (reader.NextResult());
 
         return new(null, targets);
     }

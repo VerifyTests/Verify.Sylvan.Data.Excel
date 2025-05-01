@@ -46,7 +46,7 @@ public static void Initialize() =>
 public Task VerifyExcel() =>
     VerifyFile("sample.xlsx");
 ```
-<sup><a href='/src/Tests/Samples.cs#L7-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyExcel' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L8-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyExcel' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -62,7 +62,7 @@ public Task VerifyExcelStream()
     return Verify(stream, "xlsx");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L27-L36' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyExcelStream' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L28-L37' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyExcelStream' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -79,11 +79,11 @@ public Task VerifyExcelDataReader()
     return Verify(reader);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L15-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcelDataReader' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L16-L26' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcelDataReader' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
-## Example snapshot
+### Example snapshot
 
 <!-- snippet: Samples.VerifyExcel#Sheet1.verified.csv -->
 <a id='snippet-Samples.VerifyExcel#Sheet1.verified.csv'></a>
@@ -136,4 +136,29 @@ public Task VerifyExcelDataReader()
 9,Vincenza,Weiland,Female,United States,40,6548,6557
 ```
 <sup><a href='/src/Tests/Samples.VerifyExcel#Sheet1.verified.csv#L1-L46' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyExcel#Sheet1.verified.csv' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+ 
+
+### CsvDataWriterOptions
+
+Used to configure options for writing CSV data.
+
+<!-- snippet: CsvDataWriterOptions -->
+<a id='snippet-CsvDataWriterOptions'></a>
+```cs
+[Test]
+public Task CsvDataWriterOptions()
+{
+    using var stream = File.OpenRead("sample.xlsx");
+    var options = new CsvDataWriterOptions
+    {
+        Delimiter = '\t',
+        Quote = '"',
+    };
+
+    return Verify(stream)
+        .CsvDataWriterOptions(options);
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L39-L55' title='Snippet source file'>snippet source</a> | <a href='#snippet-CsvDataWriterOptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
