@@ -3,6 +3,7 @@
     <TargetFrameworks>net472;net8.0;net9.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Polyfill" PrivateAssets="all" />
     <PackageReference Include="Sylvan.Data.Csv" />
     <PackageReference Include="Sylvan.Data.Excel" />
     <PackageReference Include="Verify" />
