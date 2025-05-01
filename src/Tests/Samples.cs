@@ -13,6 +13,10 @@ public class Samples
 
     #endregion
 
+    [Test]
+    public Task MultipleSheets() =>
+        VerifyFile("sample_multiple_sheets.xlsx");
+
     #region ExcelDataReader
 
     [Test]

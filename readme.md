@@ -62,7 +62,7 @@ public Task VerifyExcelStream()
     return Verify(stream, "xlsx");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L28-L37' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyExcelStream' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L32-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyExcelStream' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -79,7 +79,7 @@ public Task VerifyExcelDataReader()
     return Verify(reader);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L16-L26' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcelDataReader' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L20-L30' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcelDataReader' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -160,5 +160,5 @@ public Task CsvDataWriterOptions()
         .CsvDataWriterOptions(options);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L39-L55' title='Snippet source file'>snippet source</a> | <a href='#snippet-CsvDataWriterOptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L43-L59' title='Snippet source file'>snippet source</a> | <a href='#snippet-CsvDataWriterOptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->

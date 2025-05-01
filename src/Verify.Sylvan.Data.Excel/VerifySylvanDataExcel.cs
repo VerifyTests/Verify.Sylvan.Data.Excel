@@ -32,23 +32,22 @@
         if (sheets.Count == 1)
         {
             var (csv, _) = sheets[0];
-            return new(null, [new("csv", csv, null)]);
+            return new(null, [new("csv", csv)]);
         }
 
-        var targets = new List<Target>(sheets.Count);
-        foreach (var sheet in sheets)
-        {
-            targets.Add(new("csv", sheet.Csv, reader.WorksheetName));
-        }
-
-        return new(null, targets);
+        return new(
+            null,
+            sheets.Select(_ => new Target("csv", _.Csv, _.Name)));
     }
 
     static IEnumerable<(StringBuilder Csv, string? Name)> Convert(ExcelDataReader reader, CsvDataWriterOptions? options)
     {
-        using var writer = new StringWriter();
-        using var csvWriter = CsvDataWriter.Create(writer, options);
-        csvWriter.Write(reader);
-        yield return (writer.GetStringBuilder(), reader.WorksheetName);
+        do
+        {
+            using var writer = new StringWriter();
+            using var csvWriter = CsvDataWriter.Create(writer, options);
+            csvWriter.Write(reader);
+            yield return (writer.GetStringBuilder(), reader.WorksheetName);
+        } while (reader.NextResult());
     }
 }
