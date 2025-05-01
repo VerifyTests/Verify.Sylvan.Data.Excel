@@ -28,15 +28,27 @@
     {
         var options = settings.GetCsvDataWriterOptions();
 
-        var targets = new List<Target>();
-        do
+        var sheets = Convert(reader, options).ToList();
+        if (sheets.Count == 1)
         {
-            using var writer = new StringWriter();
-            using var csvWriter = CsvDataWriter.Create(writer, options);
-            csvWriter.Write(reader);
-            targets.Add(new("csv", writer.GetStringBuilder(), reader.WorksheetName));
-        } while (reader.NextResult());
+            var (csv, _) = sheets[0];
+            return new(null, [new("csv", csv, null)]);
+        }
+
+        var targets = new List<Target>(sheets.Count);
+        foreach (var sheet in sheets)
+        {
+            targets.Add(new("csv", sheet.Csv, reader.WorksheetName));
+        }
 
         return new(null, targets);
+    }
+
+    static IEnumerable<(StringBuilder Csv, string? Name)> Convert(ExcelDataReader reader, CsvDataWriterOptions? options)
+    {
+        using var writer = new StringWriter();
+        using var csvWriter = CsvDataWriter.Create(writer, options);
+        csvWriter.Write(reader);
+        yield return (writer.GetStringBuilder(), reader.WorksheetName);
     }
 }

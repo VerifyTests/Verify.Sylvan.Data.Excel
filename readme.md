@@ -85,8 +85,8 @@ public Task VerifyExcelDataReader()
 
 ### Example snapshot
 
-<!-- snippet: Samples.VerifyExcel#Sheet1.verified.csv -->
-<a id='snippet-Samples.VerifyExcel#Sheet1.verified.csv'></a>
+<!-- snippet: Samples.VerifyExcel.verified.csv -->
+<a id='snippet-Samples.VerifyExcel.verified.csv'></a>
 ```csv
 0,First Name,Last Name,Gender,Country,Age,Id,Formula
 1,Dulce,Abril,Female,United States,32,1562,1563
@@ -135,7 +135,7 @@ public Task VerifyExcelDataReader()
 8,Earlean,Melgar,Female,United States,27,2456,2464
 9,Vincenza,Weiland,Female,United States,40,6548,6557
 ```
-<sup><a href='/src/Tests/Samples.VerifyExcel#Sheet1.verified.csv#L1-L46' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyExcel#Sheet1.verified.csv' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.VerifyExcel.verified.csv#L1-L46' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyExcel.verified.csv' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
  
 
