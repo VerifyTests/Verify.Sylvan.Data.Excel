@@ -8,7 +8,7 @@ Code provided by Cédric Luthi https://github.com/0xced
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Excel documents via [Sylvan.Data.Excel](https://github.com/MarkPflug/Sylvan.Data.Excel/).
 
-Converts documents xlsx to csv for verification.
+Converts Excel documents (xls, xlsb and xlsx) to csv for verification.
 
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
