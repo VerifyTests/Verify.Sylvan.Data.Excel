@@ -8,7 +8,7 @@ Code provided by Cédric Luthi https://github.com/0xced
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Excel documents via [Sylvan.Data.Excel](https://github.com/MarkPflug/Sylvan.Data.Excel/).
 
-Converts documents xlsx to csv for verification.
+Converts Excel documents (xls, xlsb and xlsx) to csv for verification.
 
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
@@ -88,54 +88,15 @@ public Task VerifyExcelDataReader()
 <!-- snippet: Samples.VerifyExcel.verified.csv -->
 <a id='snippet-Samples.VerifyExcel.verified.csv'></a>
 ```csv
-0,First Name,Last Name,Gender,Country,Age,Id,Formula
-1,Dulce,Abril,Female,United States,32,1562,1563
-2,Mara,Hashimoto,Female,Great Britain,25,1582,1584
-3,Philip,Gent,Male,France,36,2587,2590
-4,Kathleen,Hanner,Female,United States,25,3549,3553
-5,Nereida,Magwood,Female,United States,58,2468,2473
-6,Gaston,Brumm,Male,United States,24,2554,2560
-7,Etta,Hurn,Female,Great Britain,56,3598,3605
-8,Earlean,Melgar,Female,United States,27,2456,2464
-9,Vincenza,Weiland,Female,United States,40,6548,6557
-1,Dulce,Abril,Female,United States,32,1562,1563
-2,Mara,Hashimoto,Female,Great Britain,25,1582,1584
-3,Philip,Gent,Male,France,36,2587,2590
-4,Kathleen,Hanner,Female,United States,25,3549,3553
-5,Nereida,Magwood,Female,United States,58,2468,2473
-6,Gaston,Brumm,Male,United States,24,2554,2560
-7,Etta,Hurn,Female,Great Britain,56,3598,3605
-8,Earlean,Melgar,Female,United States,27,2456,2464
-9,Vincenza,Weiland,Female,United States,40,6548,6557
-1,Dulce,Abril,Female,United States,32,1562,1563
-2,Mara,Hashimoto,Female,Great Britain,25,1582,1584
-3,Philip,Gent,Male,France,36,2587,2590
-4,Kathleen,Hanner,Female,United States,25,3549,3553
-5,Nereida,Magwood,Female,United States,58,2468,2473
-6,Gaston,Brumm,Male,United States,24,2554,2560
-7,Etta,Hurn,Female,Great Britain,56,3598,3605
-8,Earlean,Melgar,Female,United States,27,2456,2464
-9,Vincenza,Weiland,Female,United States,40,6548,6557
-1,Dulce,Abril,Female,United States,32,1562,1563
-2,Mara,Hashimoto,Female,Great Britain,25,1582,1584
-3,Philip,Gent,Male,France,36,2587,2590
-4,Kathleen,Hanner,Female,United States,25,3549,3553
-5,Nereida,Magwood,Female,United States,58,2468,2473
-6,Gaston,Brumm,Male,United States,24,2554,2560
-7,Etta,Hurn,Female,Great Britain,56,3598,3605
-8,Earlean,Melgar,Female,United States,27,2456,2464
-9,Vincenza,Weiland,Female,United States,40,6548,6557
-1,Dulce,Abril,Female,United States,32,1562,1563
-2,Mara,Hashimoto,Female,Great Britain,25,1582,1584
-3,Philip,Gent,Male,France,36,2587,2590
-4,Kathleen,Hanner,Female,United States,25,3549,3553
-5,Nereida,Magwood,Female,United States,58,2468,2473
-6,Gaston,Brumm,Male,United States,24,2554,2560
-7,Etta,Hurn,Female,Great Britain,56,3598,3605
-8,Earlean,Melgar,Female,United States,27,2456,2464
-9,Vincenza,Weiland,Female,United States,40,6548,6557
+0,First Name,Last Name,Gender,Country,Date,Age,Id,Formula
+1,Dulce,Abril,Female,United States,2017-10-15,32,1562,1594
+2,Mara,Hashimoto,Female,Great Britain,2016-08-16,25,1582,1607
+3,Philip,Gent,Male,France,2015-05-21,36,2587,2623
+4,Kathleen,Hanner,Female,United States,2017-10-15,25,3549,3574
+5,Nereida,Magwood,Female,United States,2016-08-16,58,2468,2526
+6,Gaston,Brumm,Male,United States,2015-05-21,24,2554,2578
 ```
-<sup><a href='/src/Tests/Samples.VerifyExcel.verified.csv#L1-L46' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyExcel.verified.csv' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.VerifyExcel.verified.csv#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyExcel.verified.csv' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
  
 
