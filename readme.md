@@ -13,6 +13,11 @@ Converts Excel documents (xls, xlsb and xlsx) to csv for verification.
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
 
+## Sponsors
+
+include: zzz
+
+
 ## NuGet
 
  * https://nuget.org/packages/Verify.Sylvan.Data.Excel
