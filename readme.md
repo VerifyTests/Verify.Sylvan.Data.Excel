@@ -15,6 +15,7 @@ Converts Excel documents (xls, xlsb and xlsx) to csv for verification.
 
 ## Sponsors
 
+
 ### Entity Framework Extensions<!-- include: zzz. path: /docs/zzz.include.md -->
 
 [Entity Framework Extensions](https://entityframework-extensions.net/) is a major sponsor and is proud to contribute to the development this project.
