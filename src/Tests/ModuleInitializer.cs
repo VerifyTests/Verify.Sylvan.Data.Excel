@@ -9,9 +9,6 @@
     #endregion
 
     [ModuleInitializer]
-    public static void InitializeOther()
-    {
-        VerifyDiffPlex.Initialize();
-        VerifyImageMagick.RegisterComparers(.01);
-    }
+    public static void InitializeOther() =>
+        VerifierSettings.InitializePlugins();
 }
