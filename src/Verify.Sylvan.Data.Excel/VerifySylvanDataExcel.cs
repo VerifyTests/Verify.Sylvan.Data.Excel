@@ -28,15 +28,19 @@
     {
         var options = settings.GetCsvDataWriterOptions();
 
+        var info = new Info
+        {
+            SheetNames = reader.WorksheetNames,
+        };
         var sheets = Convert(reader, options).ToList();
         if (sheets.Count == 1)
         {
             var (csv, _) = sheets[0];
-            return new(null, [new("csv", csv)]);
+            return new(info, [new("csv", csv)]);
         }
 
         return new(
-            null,
+            info,
             sheets.Select(_ => new Target("csv", _.Csv, _.Name)));
     }
 
