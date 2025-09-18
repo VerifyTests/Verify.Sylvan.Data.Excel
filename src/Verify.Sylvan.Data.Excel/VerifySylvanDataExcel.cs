@@ -1,4 +1,6 @@
-﻿public static class VerifySylvanDataExcel
+﻿namespace VerifyTests;
+
+public static class VerifySylvanDataExcel
 {
     public static bool Initialized { get; private set; }
 

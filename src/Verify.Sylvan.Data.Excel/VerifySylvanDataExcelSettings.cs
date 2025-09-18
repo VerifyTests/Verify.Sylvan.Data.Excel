@@ -1,4 +1,6 @@
-﻿public static class VerifySylvanDataExcelSettings
+﻿namespace VerifyTests;
+
+public static class VerifySylvanDataExcelSettings
 {
     public static void ExcelDataReaderOptions(this VerifySettings settings, ExcelDataReaderOptions options) =>
         settings.Context["VerifySylvanDataExcelDataReaderOptions"] = options;
