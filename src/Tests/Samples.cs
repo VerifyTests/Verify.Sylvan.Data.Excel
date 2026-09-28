@@ -1,8 +1,7 @@
-﻿
+
 using Sylvan.Data.Csv;
 using Sylvan.Data.Excel;
 
-[TestFixture]
 public class Samples
 {
     #region VerifyExcel
