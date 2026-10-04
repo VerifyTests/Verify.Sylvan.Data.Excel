@@ -15,6 +15,7 @@
     <PackageReference Include="Verify" />
     <ProjectReference Include="..\Verify.Sylvan.Data.Excel\Verify.Sylvan.Data.Excel.csproj" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
+    <PackageReference Include="ProjectFiles" PrivateAssets="all" />
 
     <None Update="sample.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

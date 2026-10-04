@@ -14,7 +14,7 @@ public class Samples
 
     [Test]
     public Task MultipleSheets() =>
-        VerifyFile("sample_multiple_sheets.xlsx");
+        VerifyFile(ProjectFiles.sample_multiple_sheets_xlsx.Path);
 
     #region ExcelDataReader
 
