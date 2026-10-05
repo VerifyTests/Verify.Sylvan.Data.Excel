@@ -14,7 +14,7 @@ Verifying a workbook produces:
 
  * The workbook itself, as `.verified.xlsx`, `.verified.xlsb` or `.verified.xls`. An xlsx or an xlsb is a zip package, so it is passed through [DeterministicIoPackaging](https://github.com/SimonCropp/DeterministicIoPackaging), which removes the timestamps and the entry order that differ from one save to the next. This can be omitted with [`ExcludeTargets`](#choosing-what-is-verified).
  * An info file, `.verified.txt`, with the names of its sheets.
- * A csv of each sheet, named after the sheet: `#Sheet1.verified.csv`, `#Sheet2.verified.csv`, etc.
+ * A csv of each sheet, named after the sheet: `#Sheet1.verified.csv`, `#Sheet2.verified.csv`, etc. A hidden sheet has a csv as any other, and is named under `HiddenSheets` in the info file. Options passed with `ExcelDataReaderOptions` are used as they are, so with those a hidden sheet is read only when `ReadHiddenWorksheets` is set. A reader that is passed in directly reads what it was created to read, and does not say which sheets are hidden. A sheet is a page, numbered by where it is among all the sheets of the workbook with hidden sheets counted, so `PagesToInclude` leaves out the csv of a sheet. A hidden sheet is counted whether or not the reader is asked to read it.
 
 An `ExcelDataReader` passed to a verification has no workbook to hand, so only the info file and the csv files are produced for it.
 
@@ -86,7 +86,7 @@ public Task VerifyExcelStream()
     return Verify(stream, "xlsx");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L53-L62' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyExcelStream' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L122-L131' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyExcelStream' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -103,7 +103,7 @@ public Task VerifyExcelDataReader()
     return Verify(reader);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L28-L38' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcelDataReader' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L97-L107' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcelDataReader' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -163,7 +163,7 @@ public Task CsvDataWriterOptions()
         .CsvDataWriterOptions(options);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L73-L89' title='Snippet source file'>snippet source</a> | <a href='#snippet-CsvDataWriterOptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L142-L158' title='Snippet source file'>snippet source</a> | <a href='#snippet-CsvDataWriterOptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -179,7 +179,7 @@ public Task SheetNamesOnly() =>
     VerifyFile("sample.xlsx")
         .ExcludeDerivedTargets("csv");
 ```
-<sup><a href='/src/Tests/Samples.cs#L64-L71' title='Snippet source file'>snippet source</a> | <a href='#snippet-SheetNamesOnly' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L133-L140' title='Snippet source file'>snippet source</a> | <a href='#snippet-SheetNamesOnly' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 `VerifierSettings.ExcludeDerivedTargets("csv")` does the same for every test.
